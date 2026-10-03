@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
+import Navber from "@/component/navber/Navber";
 
 const noto_Sans_Bengali = Noto_Sans_Bengali({
   variable: "--font-noto_Sans_Bengali",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${noto_Sans_Bengali.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Navber/>
         <main>
           {children}
         </main>
