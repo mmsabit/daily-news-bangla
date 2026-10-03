@@ -42,7 +42,7 @@ const Navber = () => {
               height={90}
               alt="logo"
               loading="eager"
-              className="h-full w-full object-contain max-w-40"
+              className="h-full w-full object-contain max-w-40 lg:max-w-7/10"
             />
           </div>
           <div className="navbar-end gap-5">
