@@ -38,3 +38,16 @@
 
     return publishedDate.toLocaleDateString("bn-BD");
   }
+
+
+
+  // make text shorter
+  export function textshorter(text: string): string {
+  const words = text.trim().split(/\s+/);
+  
+  if (words.length <= 14) {
+    return text;
+  }
+  
+  return words.slice(0, 14).join(" ") + "...";
+}
