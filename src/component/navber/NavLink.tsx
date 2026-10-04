@@ -16,7 +16,7 @@ const NavLink = async () => {
       {navItems.map((n: Navtype) => (
         <li key={n.topicId}>
           <Link
-            href={n.slug}
+            href={`/category/${n.slug}`}
             className="p-4 w-full rounded-none hover:bg-[#DC2626]"
           >
             {n.title}
