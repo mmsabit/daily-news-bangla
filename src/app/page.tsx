@@ -26,8 +26,8 @@ export default async function Home() {
       <OtherNews newsSec = {international} />
       <OtherNews newsSec = {health} />
       <OtherNews newsSec = {video} />
-      <OtherNews newsSec = {otherNews} />
-     
+      <OtherNews newsSec = {otherNews}/>
+      
     </div>
   );
 }
