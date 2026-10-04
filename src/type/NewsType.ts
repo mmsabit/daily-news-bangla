@@ -31,8 +31,8 @@ export interface ArticleType {
   category: string;
   type: string;
   isLive: boolean;
-  firstPublished: string; 
-  lastPublished:string;
+  firstPublished: string;
+  lastPublished: string;
   source: string;
 }
 
@@ -46,13 +46,24 @@ export interface MainNewsType {
 }
 
 export interface catagoryType {
-  success: boolean,
-  count: number,
-  cachedAt: string,
-  slug: string,
-  topicId: string,
-  title: string,
-  page: number,
-  pageCount: number,
-  data: ArticleType[]
+  success: boolean;
+  count: number;
+  cachedAt: string;
+  slug: string;
+  topicId: string;
+  title: string;
+  page: number;
+  pageCount: number;
+  data: ArticleType[];
+}
+
+export interface newsItemType {
+  type: string;
+  url: string;
+  width: number;
+  height: number;
+  caption: string;
+  altText: string;
+  copyrightHolder: string;
+  text:string;
 }

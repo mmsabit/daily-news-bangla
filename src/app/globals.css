@@ -4,3 +4,7 @@
 body{
     background-color: #f9f9ff;
 }
+
+.newslink:hover h3{
+    text-decoration: underline;
+}
