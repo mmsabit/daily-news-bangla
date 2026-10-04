@@ -51,7 +51,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
             {mainNews.articles.slice(1).map((news: ArticleType) => (
               <div
                 key={news.id}
-                className="p-2.5 border border-base-200 mb-2.5"
+                className="p-2.5 border border-base-300 rounded-md mb-2.5"
               >
                 <div className="flex gap-4">
                   <h4 className="text-lg font-semibold mb-5 w-8/10">

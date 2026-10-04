@@ -1,7 +1,11 @@
 import MainSection from "@/component/main-section/MainSection";
 import Marquee from "@/component/Marquee";
 import OtherNews from "@/component/othernews/OtherNews";
-
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'হোম - দৈনিক বাংলা সংবাদ',
+}
 
 export default async function Home() {
   const res = await fetch ("https://news-api-v2.vercel.app/api/news/sections");

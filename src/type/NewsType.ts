@@ -44,3 +44,15 @@ export interface MainNewsType {
   count: number;
   articles: ArticleType[];
 }
+
+export interface catagoryType {
+  success: boolean,
+  count: number,
+  cachedAt: string,
+  slug: string,
+  topicId: string,
+  title: string,
+  page: number,
+  pageCount: number,
+  data: ArticleType[]
+}
