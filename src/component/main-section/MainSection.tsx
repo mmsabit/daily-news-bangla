@@ -2,51 +2,12 @@ import { ArticleType, MainNewsType } from "@/type/NewsType";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import React from "react";
+import { getBanglaTimeAgo } from "@/type/time";
 
 const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
   const highLight: ArticleType = mainNews.articles[0];
 
-  function getBanglaTimeAgo(dateString: string): string {
-    const publishedDate = new Date(dateString);
-    const now = new Date();
 
-    const diffInSeconds = Math.floor(
-      (now.getTime() - publishedDate.getTime()) / 1000,
-    );
-
-    const minute = 60;
-    const hour = 60 * minute;
-    const day = 24 * hour;
-
-    const toBanglaNumber = (num: number): string => {
-      return num.toString().replace(/\d/g, (digit: string) => {
-        return "০১২৩৪৫৬৭৮৯"[Number(digit)];
-      });
-    };
-
-    if (diffInSeconds < minute) {
-      return "এইমাত্র";
-    }
-
-    if (diffInSeconds < hour) {
-      const minutes = Math.floor(diffInSeconds / minute);
-      return `${toBanglaNumber(minutes)} মিনিট আগে`;
-    }
-
-    if (diffInSeconds < day) {
-      const hours = Math.floor(diffInSeconds / hour);
-      return `${toBanglaNumber(hours)} ঘণ্টা আগে`;
-    }
-
-    const days = Math.floor(diffInSeconds / day);
-
-    if (days < 7) {
-      return `${toBanglaNumber(days)} দিন আগে`;
-    }
-
-    return publishedDate.toLocaleDateString("bn-BD");
-  }
   return (
     <div>
       <div className="max-w-7xl w-full mx-auto my-10">
@@ -63,6 +24,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                   width={700}
                   height={700}
                   className="w-full h-full object-cover rounded-sm"
+                  loading="eager"
                 />
               </div>
               <h3 className="my-3 text-2xl font-bold">{highLight.title}</h3>
@@ -78,10 +40,27 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
               </div>
             </div>
           </div>
-          <div className="w-1/3 bg-white rounded-sm p-6 max-h-178 overflow-y-scroll ">
+          <div className="w-1/3 bg-white rounded-sm px-6 pb-6 max-h-178 overflow-y-scroll relative">
+          <div className=" pb-3 pt-9 mb-2 bg-white sticky top-0 w-full">
+            <h2 className="text-3xl border-l-4 border-[#DC2626] ps-5">
+              অন্যান্য খবর
+          </h2>
+          </div>
+          
             {mainNews.articles.slice(1).map((news: ArticleType) => (
               <div key={news.id} className="p-2.5 border border-base-200 mb-2.5">
-                <h4 className="text-lg font-semibold mb-5">{news.title}</h4>
+                <div className="flex gap-4">
+                  <h4 className="text-lg font-semibold mb-5 w-8/10">{news.title}</h4>
+                  <Image
+                  src={news.imageUrl}
+                  alt={news.imageAlt}
+                  width={80}
+                  height={80}
+                  className="w-17.5 h-17.5 object-cover rounded-sm"
+                  loading="eager"
+                />
+                </div>
+                
                 <p className="text-[12px]">{news.description}</p>
                 <div className="flex justify-between items-center mt-4">
                 <Link
