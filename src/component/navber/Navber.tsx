@@ -1,6 +1,7 @@
 import Logo from "@/asset/logo.png";
 import Image from "next/image";
 import NavLink from "./NavLink";
+import Marquee from "../Marquee";
 
 const Navber = () => {
   return (
@@ -67,6 +68,7 @@ const Navber = () => {
           </ul>
         </div>
       </div>
+      <Marquee/>
     </div>
   );
 };

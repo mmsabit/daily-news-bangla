@@ -51,3 +51,9 @@
   
   return words.slice(0, 14).join(" ") + "...";
 }
+
+export  const toBanglaNumber = (num: number): string => {
+      return num.toString().replace(/\d/g, (digit: string) => {
+        return "০১২৩৪৫৬৭৮৯"[Number(digit)];
+      });
+    };

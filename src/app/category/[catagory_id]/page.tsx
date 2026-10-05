@@ -39,6 +39,5 @@ const Catagory = async ({
       </div>
     </div>
   );
-};
-
+}; 
 export default Catagory;

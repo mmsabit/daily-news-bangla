@@ -1,3 +1,4 @@
+import MostRead from "@/component/MostRead";
 import { newsItemType } from "@/type/NewsType";
 import Image from "next/image";
 import Link from "next/link";
@@ -43,7 +44,9 @@ const NewsPage = async ({
         })}
         <Link href={data.sourceUrl} className="text-[#DC2626] hover:underline">Orginal Link: {data.source}</Link>
         </div>
-        <div className="w-1/3"></div>
+        <div className="w-1/3 relative">
+          <MostRead/>
+        </div>
       </div>
     </div>
   );

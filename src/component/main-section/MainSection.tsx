@@ -33,7 +33,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                   <p className="flex items-center gap-2 text-[#DC2626] hover:underline">
                     বিস্তারিত পড়ুন <IoIosArrowRoundForward size={20} />
                   </p>
-                  <p className="text-[12px]">
+                  <div className="text-[12px]">
                     {highLight.isLive ? (
                       <div className="flex gap-1 items-center">
                           <span className="relative flex size-3">
@@ -45,7 +45,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                     ) : (
                       getBanglaTimeAgo(highLight.lastPublished)
                     )}
-                  </p>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -62,6 +62,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                 href={news.isLive ?`${news.link}` :`/news/${news.id}`}
                 key={news.id}
                 className="newslink"
+                target={news.isLive ? '_blank':``}
               >
                 <div className="p-2.5 border border-base-300 rounded-md mb-2.5">
                   <div className="flex gap-4">
@@ -83,7 +84,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                     <p className="flex items-center gap-2 text-[#DC2626] hover:underline text-[14px]">
                       বিস্তারিত পড়ুন <IoIosArrowRoundForward size={20} />
                     </p>
-                    <p className="text-[12px]">
+                    <div className="text-[12px]">
                       {news.isLive ? (
                         <div className="flex gap-1 items-center">
                           <span className="relative flex size-3">
@@ -95,7 +96,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                       ) : (
                         getBanglaTimeAgo(news.lastPublished)
                       )}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </Link>
