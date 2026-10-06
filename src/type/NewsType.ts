@@ -27,7 +27,7 @@ export interface ArticleType {
   description: string;
   link: string;
   imageUrl: string;
-  imageAlt: string;
+  imageAlt: string| null;
   category: string;
   type: string;
   isLive: boolean;

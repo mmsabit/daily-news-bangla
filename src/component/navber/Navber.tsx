@@ -1,5 +1,6 @@
 import Logo from "@/asset/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 import NavLink from "./NavLink";
 import Marquee from "../Marquee";
 
@@ -47,28 +48,29 @@ const Navber = () => {
             />
           </div>
           <div className="navbar-end gap-5">
-            <button className="btn bg-[#DC2626] text-white">Log in</button>
-            <button className="btn btn-outline border-[#DC2626] text-[#DC2626]">
+            <Link href="/singin" className="btn bg-[#DC2626] text-white">
+              Log in
+            </Link>
+            <Link href="/singup" className="btn btn-outline border-[#DC2626] text-[#DC2626]">
               Sign up
-            </button>
+            </Link>
           </div>
         </div>
 
         <div className="collapse-content lg:hidden z-1">
           <ul className="menu border-b-base-300">
-            <NavLink/>
+            <NavLink />
           </ul>
         </div>
       </div>
       <div className="bg-[#293040] hidden lg:flex text-white">
         <div className="max-w-7xl mx-auto w-full">
           <ul className="menu menu-horizontal p-0 ">
-            
-            <NavLink/>
+            <NavLink />
           </ul>
         </div>
       </div>
-      <Marquee/>
+      <Marquee />
     </div>
   );
 };

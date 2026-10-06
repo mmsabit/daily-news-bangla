@@ -13,7 +13,7 @@ const NewsCard = ({ news }: { news: ArticleType }) => {
             <div>
               <Image
                 src={news.imageUrl}
-                alt={news.imageAlt}
+                alt={news.imageAlt ?? news.title}
                 width={294}
                 height={165}
                 className="w-full h-41.25 object-cover "
