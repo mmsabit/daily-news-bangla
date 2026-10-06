@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import Marquee from "../Marquee";
+import NavInfo from "./NavInfo";
 
 const Navber = () => {
   return (
@@ -38,23 +39,18 @@ const Navber = () => {
             {/* navber start */}
           </div>
           <div className="navbar-center ">
-            <Image
-              src={Logo}
-              width={200}
-              height={90}
-              alt="logo"
-              loading="eager"
-              className="h-full w-full object-contain max-w-40 lg:max-w-7/10"
-            />
-          </div>
-          <div className="navbar-end gap-5">
-            <Link href="/signin" className="btn bg-[#DC2626] text-white">
-              Log in
-            </Link>
-            <Link href="/signup" className="btn btn-outline border-[#DC2626] text-[#DC2626]">
-              Sign up
+            <Link href={"/"}>
+              <Image
+                src={Logo}
+                width={200}
+                height={90}
+                alt="logo"
+                loading="eager"
+                className="h-full w-full object-contain max-w-40 lg:max-w-7/10"
+              />
             </Link>
           </div>
+          <NavInfo />
         </div>
 
         <div className="collapse-content lg:hidden z-1">
