@@ -48,10 +48,10 @@ const Navber = () => {
             />
           </div>
           <div className="navbar-end gap-5">
-            <Link href="/singin" className="btn bg-[#DC2626] text-white">
+            <Link href="/signin" className="btn bg-[#DC2626] text-white">
               Log in
             </Link>
-            <Link href="/singup" className="btn btn-outline border-[#DC2626] text-[#DC2626]">
+            <Link href="/signup" className="btn btn-outline border-[#DC2626] text-[#DC2626]">
               Sign up
             </Link>
           </div>

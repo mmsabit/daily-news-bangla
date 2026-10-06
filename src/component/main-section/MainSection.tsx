@@ -20,10 +20,10 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                 <div>
                   <Image
                     src={highLight.imageUrl}
-                    alt={highLight.imageAlt}
+                    alt={highLight.imageAlt ?? "Image"}
                     width={700}
                     height={700}
-                    className="w-full h-full object-cover rounded-sm"
+                    className="w-full h-110 object-cover rounded-sm"
                     loading="eager"
                   />
                 </div>
@@ -71,7 +71,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                     </h3>
                     <Image
                       src={news.imageUrl}
-                      alt={news.imageAlt}
+                      alt={news.imageAlt?? "Image"}
                       width={80}
                       height={80}
                       className="w-17.5 h-17.5 object-cover rounded-sm"

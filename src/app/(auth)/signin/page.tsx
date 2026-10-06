@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingIn = () => {
+const SignIn = () => {
   return (
     <div>
       <div className="flex flex-col lg:max-w-7xl max-w-9/10 mx-auto h-[70vh] justify-center items-center">
@@ -34,4 +34,4 @@ const SingIn = () => {
   );
 };
 
-export default SingIn;
+export default SignIn;
