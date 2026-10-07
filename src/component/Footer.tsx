@@ -5,8 +5,8 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <div className='bg-[#293040] mt-20 py-15'>
-            <div className="lg:max-w-7xl max-w-9/10 w-full mx-auto flex gap-6 items-center">
-            <div className="w-full">
+            <div className="lg:max-w-7xl max-w-9/10 w-full mx-auto flex lg:flex-row flex-col gap-6 items-center">
+            <div className="w-full flex items-center justify-center lg:justify-start">
                 <Image
               src={Logo}
               width={200}
@@ -28,7 +28,7 @@ const Footer = () => {
                     </Link>
                 </p>
             </div>
-            <div className="w-full text-[#BEC6E0] text-[12px]  gap-5 flex justify-end">
+            <div className="w-full text-[#BEC6E0] text-[12px]  gap-5 flex lg:justify-end justify-center">
                 <Link
                 href={`/`}
                 className="hover:text-[#DC2626]"

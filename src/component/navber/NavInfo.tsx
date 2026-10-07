@@ -28,12 +28,12 @@ const NavInfo = () => {
         </div>
       ) : (
         <div className="flex gap-5 items-center">
-          <Link href="/signin" className="btn bg-[#DC2626] text-white">
+          <Link href="/signin" className="btn md:btn-md btn-xs bg-[#DC2626] text-white">
             Log in
           </Link>
           <Link
             href="/signup"
-            className="btn btn-outline border-[#DC2626] text-[#DC2626]"
+            className="btn md:btn-md btn-xs btn-outline border-[#DC2626] text-[#DC2626] lg:flex hidden"
           >
             Sign up
           </Link>

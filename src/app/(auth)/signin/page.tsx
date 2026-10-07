@@ -46,10 +46,10 @@ const SignIn = () => {
   }
   return (
     <div>
-      <div className="flex flex-col lg:max-w-7xl max-w-9/10 mx-auto h-[70vh] justify-center items-center">
+      <div className="flex flex-col lg:max-w-7xl max-w-9/10 mx-auto w-full h-[70vh] justify-center items-center">
         <h2 className="text-3xl mb-5 font-bold">Log in</h2>
         <form onSubmit={handleSubmit}>
-          <fieldset className="fieldset bg-white border-base-300 rounded-box w-xs border p-4">
+          <fieldset className="fieldset bg-white border-base-300 rounded-box w-xs  border p-4">
             <label className="label">Email</label>
             <input
               name="user_email"
@@ -89,7 +89,7 @@ const SignIn = () => {
           <hr className="border border-base-300 w-22.5" /> <span>OR</span>{" "}
           <hr className="border border-base-300 w-22.5" />
         </div>
-        <div className="flex gap-2 mt-3">
+        <div className="flex flex-col lg:flex-row gap-2 mt-3">
           <button onClick={handleGoogle} className="btn bg-white text-black border-[#e5e5e5]">
             <svg
               aria-label="Google logo"

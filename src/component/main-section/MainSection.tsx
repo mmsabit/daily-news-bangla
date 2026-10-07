@@ -23,7 +23,7 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                     alt={highLight.imageAlt ?? "Image"}
                     width={700}
                     height={700}
-                    className="w-full h-110 object-cover rounded-sm"
+                    className="w-full lg:h-110 h-60 object-cover rounded-sm"
                     loading="eager"
                   />
                 </div>
@@ -65,8 +65,8 @@ const MainSection = ({ mainNews }: { mainNews: MainNewsType }) => {
                 target={news.isLive ? '_blank':``}
               >
                 <div className="p-2.5 border border-base-300 rounded-md mb-2.5">
-                  <div className="flex gap-4">
-                    <h3 className="text-lg font-semibold mb-5 w-8/10">
+                  <div className="flex lg:flex-row flex-col-reverse gap-4">
+                    <h3 className="text-lg font-semibold mb-5 mg:w-8/10 w-full">
                       {news.title}
                     </h3>
                     <Image

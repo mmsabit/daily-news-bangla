@@ -20,9 +20,9 @@ const NewsPage = async ({
 
   return (
     <div>
-      <div className="lg:max-w-7xl max-w-9/10 mx-auto flex gap-6 pt-10">
-        <div className="w-2/3 bg-white p-5">
-        <h2 className="text-3xl/relaxed font-bold mb-6">{data.title}</h2>
+      <div className="lg:max-w-7xl max-w-9/10 mx-auto flex lg-flex-row flex-col gap-6 pt-10">
+        <div className="lg:w-2/3 w-full bg-white p-5">
+        <h2 className="lg:text-3xl/relaxed text-2xl/relaxed font-bold mb-6">{data.title}</h2>
 
         {body.map((item: newsItemType, ind: number) => {
           if (item.type === "image") {
@@ -44,7 +44,7 @@ const NewsPage = async ({
         })}
         <Link href={data.sourceUrl} className="text-[#DC2626] hover:underline">Orginal Link: {data.source}</Link>
         </div>
-        <div className="w-1/3 relative">
+        <div className="lg:w-1/3 w-full relative">
           <MostRead/>
         </div>
       </div>

@@ -105,7 +105,7 @@ const SignUp = () => {
         <hr className="border border-base-300 w-22.5" /> <span>OR</span>{" "}
         <hr className="border border-base-300 w-22.5" />
       </div>
-      <div className="flex gap-2 mt-3">
+      <div className="flex gap-2 mt-3 flex-col lg:flex-row">
         <button
           onClick={handleGoogle}
           className="btn bg-white text-black border-[#e5e5e5]"
