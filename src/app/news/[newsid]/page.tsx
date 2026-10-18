@@ -13,6 +13,9 @@ const NewsPage = async ({
 
   const res = await fetch(
     `https://news-api-v2.vercel.app/api/article/${newsid}`,
+    {
+      cache: "no-store",
+    }
   );
   const val = await res.json();
   const data = val.data;

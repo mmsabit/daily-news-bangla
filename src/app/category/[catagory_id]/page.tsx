@@ -18,6 +18,9 @@ const Catagory = async ({
 
   const res = await fetch(
     `https://news-api-v2.vercel.app/api/category/${catagory_id}?page=${page}`,
+    {
+      cache: "no-store",
+    }
   );
   const data: catagoryType = await res.json();
   const Newses = data.data;

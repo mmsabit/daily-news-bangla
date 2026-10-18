@@ -3,7 +3,9 @@ import { ArticleType } from "@/type/NewsType";
 import Link from "next/link";
 
 const MostRead = async() => {
-    const res = await fetch("https://news-api-v2.vercel.app/api/news/most-read");
+    const res = await fetch("https://news-api-v2.vercel.app/api/news/most-read", {
+        cache: "no-store",
+    });
     const data = await res.json();
     const sec = data.data
 

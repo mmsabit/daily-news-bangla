@@ -5,7 +5,9 @@ import OtherNews from "@/component/othernews/OtherNews";
 
 
 export default async function Home() {
-  const res = await fetch ("https://news-api-v2.vercel.app/api/news/sections");
+  const res = await fetch("https://news-api-v2.vercel.app/api/news/sections", {
+    cache: "no-store",
+  });
   const data = await res.json();
   const sec = data.data;
   const mainNews = sec[0];

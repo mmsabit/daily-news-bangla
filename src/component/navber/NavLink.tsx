@@ -2,7 +2,9 @@ import { Navtype } from "@/type/NewsType";
 import Link from "next/link";
 
 const NavLink = async () => {
-  const res = await fetch("https://news-api-v2.vercel.app/api/categories");
+  const res = await fetch("https://news-api-v2.vercel.app/api/categories", {
+    cache: "no-store",
+  });
   const data = await res.json();
   const navItems = data.data.filter((n: Navtype) => n.scrapable);
 

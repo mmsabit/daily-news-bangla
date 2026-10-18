@@ -4,7 +4,9 @@ import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
 
 const Marquee = async () => {
-  const res = await fetch("https://news-api-v2.vercel.app/api/news?limit=10");
+  const res = await fetch("https://news-api-v2.vercel.app/api/news?limit=10", {
+    cache: "no-store",
+  });
   const data = await res.json();
   const leatestNews = data.data;
   return (
